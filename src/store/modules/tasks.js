@@ -44,7 +44,7 @@ export default {
         },
         removeTask(state, data) {
             const column = state.columns.find((item) => item.value === data.valueColumn);
-            const taskIndex = column.tasks.find((item) => item.id === data.taskId);
+            const taskIndex = column.tasks.findIndex((item) => item.id === data.taskId);
             column.tasks.splice(taskIndex, 1);
         },
     },
